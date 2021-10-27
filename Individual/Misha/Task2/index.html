@@ -4,6 +4,9 @@
     <title>Завдання 6.2</title>
 </head>
 <body>
-<input type="datetime-local" value="2012-04-10T20:37:40"/>
+<input type="datetime-local" id="datetimeLocalToday">
+<script>
+    setInterval(()=>document.getElementById('datetimeLocalToday').value = new Date().toJSON().slice(0,19),1000)
+</script>
 </body>
 </html>

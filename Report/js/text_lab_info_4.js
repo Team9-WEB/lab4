@@ -100,12 +100,23 @@ function bohdan4() {
             </ul>
         </div>
         <h2>Результат:</h2>
-        <img src="lab_img/result1B4.png">
+        <img src="lab_img/lab4B/result1B4.png">
+        <h3>HTML-код: </h3>
+        <img src="lab_img/lab4B/HTMLcodeT1p1.png">
+        <img src="lab_img/lab4B/HTMLcodeT1p2.png">
+        <h3>CSS-код: </h3>
+        <img src="lab_img/lab4B/CSScodeT1.png">
         <br>
         <h2>Завдання 2:</h2>
         <img src="lab_img/task2B4.png">
         <h2>Результат:</h2>
-        <img src="lab_img/result2B4.png">   
+        <img src="lab_img/lab4B/result2B4.png">   
+         <h3>HTML-код: </h3>
+        <img src="lab_img/lab4B/HTMLcodeT2p1.png">
+        <img src="lab_img/lab4B/HTMLcodeT2p2.png">
+        <h3>CSS-код: </h3>
+        <img src="lab_img/lab4B/CSScodeT2p1.png">
+        <img src="lab_img/lab4B/CSScodeT2p2.png">
 `;
 
     changeText(text);

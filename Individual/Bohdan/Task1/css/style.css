@@ -16,50 +16,6 @@ body {
     width: 80%;
     align-content: center;
 }
-.topbot{
-
-    background-color: blue;
-    height: 15%;
-    width: 100%;
-}
-p {
-    margin: auto;
-    margin-left: 10px;
-
-}
-#body{
-    height: 70%;
-    width: 100%;
-    overflow: hidden;
-}
-.left {
-    padding: 0;
-    margin: 0;
-    background-color: yellow;
-    display: inline-block;
-    width: 20%;
-    height: 100%;
-    overflow: hidden;
-}
-.center {
-    text-align: center;
-    padding: 0;
-    margin: 0;
-    display: inline-block;
-    width: auto;
-    height: 100%;
-    overflow: hidden;
-}
-.right{
-    padding: 0;
-    margin: 0;
-    background-color: yellow;
-    display: inline-block;
-    width: 20%;
-    height: 100%;
-    overflow: hidden;
-    float: right;
-}
 #task1 {
     display: block;
     margin: 0 auto;

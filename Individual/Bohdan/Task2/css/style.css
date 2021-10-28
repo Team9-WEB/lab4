@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+
+}
+.clearfix:after {
+    content: '';
+    display: table;
+    width: 100%;
+    clear: both;
+}
+
+.graph {
+    width: 50%;
+    height: 50vh;
+    margin:10vh auto;
+    border: 1px solid #aeaeae;
+    background-color: #eaeaea;
+}
+.bar {
+    width: 2%;
+    margin: 1px;
+    display: inline-block;
+    position: relative;
+    background-color: #aeaeae;
+    vertical-align: baseline;
+}
+.bar1 {
+    width: 0.1px;
+    margin: 1px;
+    display: inline-block;
+    position: relative;
+    background-color: #aeaeae;
+    vertical-align: baseline;
+     height: 100%;
+     opacity: 0;
+}
+
+.container {
+    margin: 0 auto;
+    width: 20%;
+}
+#array {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+}
+#task2 {
+    display: block;
+    margin: 0 auto;
+}
+#clean{
+    display: block;
+    margin: 0 auto;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet"  href="css/style.css" >
+    <title>Test</title>
+
+</head>
+<body>
+
+<div class="graph">
+    <div style="height: 100%; opacity: 0;width: 1px" class="bar1" id="0"></div>
+
+</div>
+<div class="container">
+        <label for="array" style="margin: auto;display: table">Enter your numbers</label>
+        <input type="text" id="array">
+        <br>
+        <input type="button" id="task2" value="button">
+        <br>
+
+        <script>
+            task2.onclick = function() {
+            var text = (document.getElementById('array').value.split(/\D+/g));
+            var array = cleanArray(text);
+                function cleanArray(actual) {
+                    var newArray = new Array();
+                    for (var i = 0; i < actual.length; i++) {
+                        if (actual[i]) {
+                            newArray.push(actual[i]);
+                        }
+                    }
+                    return newArray;
+                }
+            function create(arr){
+                for (var i=0;i<arr.length;i++){
+                    var before = document.getElementById(i);
+                    if (arr[i]>100){
+                        arr[i]=100;
+                    }
+                    var html = "<div class='bar' id='"+(i+1)+"' style ='height:"+arr[i]+"%'></div>"
+                    before.insertAdjacentHTML('afterend',html)
+                }
+            }
+            create(array);
+            alert("Your array: "+array);
+        }
+    </script>
+</div>
+</body>
+</html>

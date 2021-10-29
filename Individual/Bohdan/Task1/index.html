@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        document.getElementById('textBlock').hidden = true;
+    </script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet"  href="css/style.css" >
+    <title>Test</title>
+
+</head>
+<body>
+<div class="container">
+
+    <div id="textBlock">
+        <p id="text"></p>
+        <br>
+        <p id="text1"></p>
+    </div>
+    <hr>
+    <br>
+    <input type="button" id="task1" value="Кнопка">
+    <script>
+        task1.onclick = function() {
+            document.getElementById('textBlock').hidden = true;
+            var a = Array.from({length: 5}, () => Math.floor(Math.random() * 40+1));
+            var b = Array.from({length: 5}, () => Math.floor(Math.random() * -40));
+            var p = a.concat(b);
+
+            const selectionSort = arr => {
+                for (let i = 0, l = arr.length, k = l - 1; i < k; i++) {
+                    let indexMin = i;
+                    for (let j = i + 1; j < l; j++) {
+                        if (arr[indexMin] > arr[j]) {
+                            indexMin = j;
+                        }
+                    }
+                    if (indexMin !== i) {
+                        [arr[i], arr[indexMin]] = [arr[indexMin], arr[i]];
+                    }
+                }
+                return arr;
+            };
+
+            document.getElementById("text").innerHTML = "before sorting: ["+p+"]";
+            document.getElementById("text1").innerHTML = "after sorting: ["+selectionSort(p)+"]";
+
+            Array.prototype.max = function() {
+                return Math.max.apply(null, this);
+            };
+
+            Array.prototype.min = function() {
+                return Math.min.apply(null, this);
+            };
+
+            document.getElementById('textBlock').hidden = false;
+
+            alert("Array: "+p+"\nMax value is: "+b.max()+"\nMin value is: "+ a.min());}
+    </script>
+
+</div>
+</body>
+</html>

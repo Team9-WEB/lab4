@@ -1,0 +1,28 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Main</title>
+    <style>
+        html {
+            text-align: center;
+        }
+    </style>
+    <script>
+        function getUrl() {
+            alert('Handler onclick!')
+            const input = document.getElementById('answer')
+            input.value = window.location.href
+            input.size = window.location.href.length
+        }
+    </script>
+</head>
+<body>
+<h1>гіпертекстове посилання (схема URL)</h1>
+<button onclick="getUrl()"> Get the page url</button>
+<input id="answer" readonly size="">
+<form>
+    <h2>Підстановка (entity)</h2>
+    <input value="&{window.location.href};">
+</form>
+</body>
+</html>

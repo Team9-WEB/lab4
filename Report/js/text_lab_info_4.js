@@ -49,11 +49,17 @@ function misha4() {
                 <li>Працює на пов'язаних списках та інших структурах з послідовним доступом.</li>
             </ol>
         </div>
+        <h3>HTML:</h3>
+        <img src="lab_img/lab4_htmM.png">
+        <h3>JS:</h3>
+        <img src="lab_img/lab4_jsM.png">
         <h2>Результат:</h2>
         <img src="lab_img/result1M4.png">
         <br>
         <h2>Завдання 2:</h2>
         <img src="lab_img/task2M4.png">
+        <h3>HTML:</h3>
+        <img src="lab_img/lab4_2html.png">
         <h2>Результат:</h2>
         <img src="lab_img/result2M4.png">   
 `;

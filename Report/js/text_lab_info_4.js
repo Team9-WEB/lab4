@@ -80,11 +80,22 @@ function denys4() {
                 <li>Повторює два попередніх кроки, доки список не завершиться (починаючи з наступної позиції)</li>
             </ul>
         </div>
+        <h3>HTML:</h3>
+        <img src="lab_img/lab4_htmD.png">
+        <h3>JS:</h3>
+        <img src="lab_img/lab4_jsD1.png">
+        <br>
+        <img src="lab_img/lab4_jsD2.png">
+        <br>
         <h2>Результат:</h2>
         <img src="lab_img/result1D4.png">
         <br>
+        <img src="lab_img/result1D4_1.png">
+        <br>        
         <h2>Завдання 2:</h2>
         <img src="lab_img/task2D4.png">
+        <h3>HTML:</h3>
+        <img src="lab_img/lab4_2htmlD.png">
         <h2>Результат:</h2>
         <img src="lab_img/result2D4.png">   
 `;

@@ -1,0 +1,35 @@
+body{
+    font: 1rem 'Fira Sans', sans-serif;
+    text-align: center;
+    margin: auto;
+}
+
+.buttons{
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    background-color: lightgray;
+    border-radius: 2px;
+    box-shadow: 0 0 2px black;
+}
+
+.buttons:hover{
+    cursor: pointer;
+    background-color: wheat;
+}
+
+.panel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+textarea{
+    font-size: 14pt;
+}
+
+img{
+    height: 90%;
+    padding: 2%;
+}

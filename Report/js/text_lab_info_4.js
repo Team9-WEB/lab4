@@ -17,11 +17,298 @@ function vlad4() {
         </div>
         <h2>Результат:</h2>
         <img src="lab_img/result1V4.png">
+        <h3>HTML:</h3>
+        <xmp style="text-align:justify; background-color:whitesmoke;">
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Task-1</title>
+            <link rel="stylesheet" href="css/style.css">
+        </head>
+        <body>
+            <p class="label">Масив A:</p>
+            <div class="form_array" id="A"></div>
+
+            <p class="label">Масив B:</p>
+            <div class="form_array" id="B"></div>
+
+            <button id="generateRandom">Клікни</button>
+
+            <p class="label">Масив С:</p>
+            <div class="form_array" id="C"></div>
+
+            <button id="generateC">Тепер сюди</button>
+
+            <p class="label">Масив С поміняний:</p>
+            <div class="form_array" id="Swap"></div>
+
+            <button id="swap">Ти правильно думаєш</button>
+
+            <p class="label">Масив С відсортований:</p>
+            <div class="form_array" id="Sort"></div>
+
+            <button id="sort">Фінальний акорд</button>
+        </body>
+        <script src="js/main.js" ></script>
+        </html>
+        </xmp>
+        <h3>CSS:</h3>
+        <xmp style="text-align:justify; background-color:whitesmoke;">
+        body{
+            font-size: 16pt;
+            font-family: "Trebuchet MS";
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+        
+        .form_array{
+            height: 30px;
+            width: 550px;
+            font-weight: bold;
+            background-color: bisque;
+            text-align: center;
+            vertical-align: middle;
+            padding: 10px;
+        }
+
+        button{
+            margin: 10px;
+            padding: 10px;
+            width: 200px;
+        }
+        </xmp>
+        <h3>JS:</h3>
+        <xmp style="text-align:justify; background-color:whitesmoke;">
+        'use strict'
+
+        const LENGTH = 10; // length of ARRAY
+
+        window.onload = (event) => {
+            let generateBtn = document.getElementById('generateRandom');
+            let generateCBtn = document.getElementById('generateC');
+            let swapBtn = document.getElementById('swap');
+            let sortBtn = document.getElementById('sort');
+
+            let cSwapForm = document.getElementById('Swap');
+            let cSortForm = document.getElementById('Sort');
+            let aForm = document.getElementById('A');
+            let bForm = document.getElementById('B');
+            let cForm = document.getElementById('C');
+            
+
+            let a = [];
+            let b = [];
+            let c = [];
+
+            generateBtn.addEventListener('click', () =>{
+                a = generateRandomArray(10, -10);
+                b = generateRandomArray(10, -10);
+                aForm.innerText = "";
+                bForm.innerText = "";
+                for(let i = 0; i < LENGTH; i++){
+                    aForm.append('$'{a[i]} ');
+                    bForm.append('$'{b[i]} ');
+                }
+            });
+
+            generateCBtn.addEventListener('click', () => {
+                cForm.innerText = "";
+                c = makeCArray(a, b);
+                console.log(c);
+                for(let i = 0; i < LENGTH; i++){
+                    cForm.append('$'{c[i]} ');
+                }
+            });
+
+            swapBtn.addEventListener('click', () => {
+                swapMaxAndFirstNum(c);
+                cSwapForm.innerText = "";
+                for(let i = 0; i < LENGTH; i++){
+                    cSwapForm.append('$'{c[i]} ');
+                }
+            });
+
+            sortBtn.addEventListener('click', () => {
+                sortArrayByBulb(c);
+                cSortForm.innerText = "";
+                console.log(c);
+                for(let i = 0; i < LENGTH; i++){
+                    cSortForm.append('$'{c[i]} ');
+                }
+            });
+
+        };
+
+        // Генерирует массив с рандомными числами в заданом диапазоне
+        function generateRandomArray(max, min){
+            let array = [LENGTH];
+            for(let i = 0; i < LENGTH; i++){
+                array[i] = Math.floor(min + Math.random() * (max - min));
+            }
+            console.log(array);
+            return array;
+        }
+
+        // Наполняет массив "C" за заданной функцией в лабараторней роботе 
+        function makeCArray(firstArray, secondArray){
+            let cArray = [LENGTH];
+            for(let i = 0; i < LENGTH; i++){
+                if(firstArray[i] === secondArray[i]){
+                    cArray[i] = 1;
+                }
+                else{
+                    cArray[i] = +(1 / (firstArray[i] - secondArray[i])).toFixed(2);
+                }
+            }
+            return cArray;
+        }
+
+        // Меняет первый и максимальный элементы в массиве
+        function swapMaxAndFirstNum(array){
+            let indexOfMaxValue = indexOfMaxValueArray(array);
+            let max = array[indexOfMaxValue];
+
+            array[indexOfMaxValue] = array[0];
+            array[0] = max;
+        }
+
+        // Определяет индекс максимально элемента массива
+        function indexOfMaxValueArray(array){
+            let max = array[0];
+            let maxIndex = 0;
+            for(let i = 1; i < LENGTH; i++){
+                if(max < array[i]){
+                    max = array[i];
+                    maxIndex = i;
+                }
+            }
+            console.log(max);
+            return maxIndex;
+        }
+
+        // Сортирует массив методом "Пузырька"
+        function sortArrayByBulb(array){
+            for (let i = 0; i < LENGTH - 1; i++) {
+                for (let j = 0; j < LENGTH - 1 - i; j++) {
+                    if (array[j] > array[j + 1]) {
+                        let temp = array[j];
+                        array[j] = array[j + 1];
+                        array[j + 1] = temp;
+                    }
+                }
+            }
+        }
+        </xmp>
         <br>
         <h2>Завдання 2:</h2>
         <img src="lab_img/task2V4.png">
         <h2>Результат:</h2>
-        <img src="lab_img/result2V4.png">   
+        <img src="lab_img/result2V4.png"> 
+        <h3>CSS:</h3>
+        <xmp style="text-align:justify; background-color:whitesmoke;">
+        body{
+            font: 1rem 'Fira Sans', sans-serif;
+            text-align: center;
+            margin: auto;
+        }
+        
+        .buttons{
+            width: 30px;
+            height: 30px;
+            margin: 5px;
+            background-color: lightgray;
+            border-radius: 2px;
+            box-shadow: 0 0 2px black;
+        }
+        
+        .buttons:hover{
+            cursor: pointer;
+            background-color: wheat;
+        }
+        
+        .panel{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 100px;
+        }
+        
+        textarea{
+            font-size: 14pt;
+        }
+        
+        img{
+            height: 90%;
+            padding: 2%;
+        }
+        </xmp>
+        <h3>JS:</h3>
+        <xmp style="text-align:justify; background-color:whitesmoke;">
+        'use strict'
+
+        window.onload = (event) => {
+        
+            let boldBtn = document.getElementById('bold');
+            let italicBtn = document.getElementById('italic');
+            let underBtn = document.getElementById('under');
+            let regBtn = document.getElementById('reg');
+            let colorBtn = document.getElementById('color');
+            let text = document.getElementById('text');
+        
+            boldBtn.addEventListener('click', () => {
+                if(text.style.fontWeight == 'bold'){
+                    text.style.fontWeight = 'normal';
+                    boldBtn.style.backgroundColor = 'lightgray';
+                }
+                else{
+                    text.style.fontWeight = 'bold';
+                    boldBtn.style.backgroundColor = 'wheat';
+                }
+            });
+        
+            italicBtn.addEventListener('click', () => {
+                if(text.style.fontStyle == 'italic'){
+                    text.style.fontStyle = 'normal';
+                    italicBtn.style.backgroundColor = 'lightgray';
+                }
+                else{
+                    text.style.fontStyle = 'italic';
+                    italicBtn.style.backgroundColor = 'wheat';
+                }
+            });
+        
+            underBtn.addEventListener('click', () => {
+                if(text.style.textDecoration == 'underline'){
+                    text.style.textDecoration = 'none';
+                    underBtn.style.backgroundColor = 'lightgray';
+                }
+                else{
+                    text.style.textDecoration = 'underline';
+                    underBtn.style.backgroundColor = 'wheat';
+                }
+            });
+        
+            regBtn.addEventListener('click', () => {
+                if(text.style.textTransform == 'uppercase'){
+                    text.style.textTransform = 'none';
+                    regBtn.style.backgroundColor = 'lightgray';
+                }
+                else{
+                    text.style.textTransform = 'uppercase';
+                    regBtn.style.backgroundColor = 'wheat';
+                }
+            });
+        
+            colorBtn.addEventListener('change', (event) => {
+                text.style.color = event.target.value;
+            });
+        
+        };
+        </xmp>
 `;
 
     changeText(text);

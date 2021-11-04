@@ -12,6 +12,7 @@ function vlad() {
         <img src="lab_img/vlad_table.png">
         <p style="width: 100%">HTML-код</p>
         <xmp style="text-align:justify; background-color:whitesmoke;">
+        
         <!DOCTYPE html>
         <html lang="en">
         <head>
